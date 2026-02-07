@@ -25,17 +25,17 @@
 <img src="assets/docs/arquitetura_airbnb.png" alt="Arquitetura" style="max-width: 400px; height: auto; margin: 20px 0;">
 </div>
 
-### Objetivos
+### Sobre o projeto
 
 O projeto implementa um **pipeline ETL** utilizando a **Arquitetura Medallion** para análise de dados históricos de atrasos de voos nos Estados Unidos. Os principais objetivos são:
 
-- **Arquitetura Lakehouse**: Implementar camadas Bronze (Raw), Silver (Curated) e Gold (Aggregated) para armazenamento e processamento otimizado
+- **Arquitetura Lakehouse**: Implementa camadas Bronze (Raw), Silver (Curated) e Gold (Aggregated) para armazenamento e processamento otimizado
 
-- **Modelagem de Dados**: Desenvolver representações conceitual (MER), lógica (DER) e física (DDL) do modelo de dados
+- **Modelagem de Dados**: Representações conceitual (MER), lógica (DER) e física (DDL) do modelo de dados
 
-- **Banco de Dados**: Construir e popular um banco PostgreSQL containerizado para consultas eficientes
+- **Banco de Dados**: Constrói e popula um banco PostgreSQL containerizado para consultas eficientes
 
-- **Dashboard Analítico**: Desenvolver painéis interativos no Power BI para exploração de dados e geração de insights sobre:
+- **Dashboard Analítico**: painéis interativos no Power BI para exploração de dados e geração de insights sobre:
   - Atrasos de voos por companhia aérea
   - Causas de atrasos (meteorologia, companhia, NAS, segurança, aeronave)
   - Padrões de sazonalidade
@@ -44,11 +44,12 @@ O projeto implementa um **pipeline ETL** utilizando a **Arquitetura Medallion** 
 
 ### Fonte de Dados
 
-**Dataset**: Airline Delay and Cancellation Data (2013-2023)  
+**Dataset**: [Airline Delay and Cancellation Data (2013-2023)](https://www.kaggle.com/datasets/sriharshaeedala/airline-delay)
 **Licença**: U.S. Government Works  
 **Tamanho**: 28.73 MB | **Atualização**: Anual 
 
 Os dados são provenientes do **Bureau of Transportation Statistics (BTS)** do governo dos Estados Unidos, disponibilizados no Kaggle. O dataset cobre o período de **agosto de 2013 a agosto de 2023** (10 anos de dados históricos) e fornece informações granulares sobre performance operacional de companhias aéreas em aeroportos dos EUA.
+<!--
 
 #### Estrutura do Dataset
 
