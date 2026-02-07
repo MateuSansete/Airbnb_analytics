@@ -7,8 +7,8 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repositório-181717?style=for-the-badge&logo=github)](https://github.com/FelipeFreire-gf/SBD2-Airline_Delay_Cause)
-[![Documentação](https://img.shields.io/badge/Docs-MkDocs-526CFE?style=for-the-badge&logo=materialformkdocs&logoColor=white)](https://felipefreire-gf.github.io/SBD2-Airline_Delay_Cause/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repositório-181717?style=for-the-badge&logo=github)](https://github.com/MateuSansete/Airbnb_analytics)
+[![Documentação](https://img.shields.io/badge/Docs-MkDocs-526CFE?style=for-the-badge&logo=materialformkdocs&logoColor=white)](https://mateusansete.github.io/Airbnb_analytics/)
 [![MIRO](https://img.shields.io/badge/MIRO-Board-050038?style=for-the-badge&logo=miro&logoColor=FFD02F)](https://miro.com/app/board/uXjVGSwQ8Ok=/?share_link_id=465202330329)
 
 </div>
@@ -17,23 +17,17 @@
 
 **ETL pipeline seguindo a arquitetura Medallion (Bronze, Silver, Gold) para análise de dados sobre atrasos de voos em aeroportos dos Estados Unidos.**
 
-<div align="center">
-<img src="docs/assets/logo.png" alt="Análise de Atrasos de Voos" style="max-width: 400px; height: auto; margin: 20px 0;">
-</div>
-
-<div align="center">
-
-</div>
-
 ---
 
-## Sobre o Projeto
+## Arquitetura
 
-Este repositório é dedicado à documentação de todos os artefatos criados pelo **Grupo 04** na disciplina de **Banco de Dados 2** da Faculdade de Ciências e Tecnologias em Engenharia da **Universidade de Brasília (FCTE-UnB)**.
+<div align="center">
+<img src="assets/docs/arquitetura_airbnb.png" alt="Arquitetura" style="max-width: 400px; height: auto; margin: 20px 0;">
+</div>
 
 ### Objetivos
 
-O projeto implementa um **pipeline ETL completo** utilizando a **Arquitetura Medallion** para análise de dados históricos de atrasos de voos nos Estados Unidos. Os principais objetivos são:
+O projeto implementa um **pipeline ETL** utilizando a **Arquitetura Medallion** para análise de dados históricos de atrasos de voos nos Estados Unidos. Os principais objetivos são:
 
 - **Arquitetura Lakehouse**: Implementar camadas Bronze (Raw), Silver (Curated) e Gold (Aggregated) para armazenamento e processamento otimizado
 
@@ -52,7 +46,7 @@ O projeto implementa um **pipeline ETL completo** utilizando a **Arquitetura Med
 
 **Dataset**: Airline Delay and Cancellation Data (2013-2023)  
 **Licença**: U.S. Government Works  
-**Tamanho**: 28.73 MB | **Atualização**: Anual | **Usabilidade**: 10.0/10
+**Tamanho**: 28.73 MB | **Atualização**: Anual 
 
 Os dados são provenientes do **Bureau of Transportation Statistics (BTS)** do governo dos Estados Unidos, disponibilizados no Kaggle. O dataset cobre o período de **agosto de 2013 a agosto de 2023** (10 anos de dados históricos) e fornece informações granulares sobre performance operacional de companhias aéreas em aeroportos dos EUA.
 
@@ -96,12 +90,13 @@ Este dataset permite realizar:
 **Benchmarking**: Comparar performance entre companhias e aeroportos  
 **Modelagem Preditiva**: Desenvolver modelos de previsão de atrasos  
 **Insights Estratégicos**: Informar decisões operacionais e estratégias de mitigação
+<!--
 
 Para mais detalhes veja a documentação:
 
 ## Documentação
 
-**Site de Documentação**: [https://felipefreire-gf.github.io/SBD2-Airline_Delay_Cause/](https://felipefreire-gf.github.io/SBD2-Airline_Delay_Cause/)
+**Site de Documentação**: [https://mateusansete.github.io/Airbnb_analytics/](https://mateusansete.github.io/Airbnb_analytics/)
 
 A documentação completa inclui:
 - Estrutura das camadas Bronze, Silver e Gold
@@ -111,7 +106,7 @@ A documentação completa inclui:
 - Análises e visualizações implementadas
 
 ## Dashboard Power BI
-
+-->
 **Em desenvolvimento** - Dashboard interativo para análise de atrasos de voos
 
 **Páginas e Features Planejadas:**
@@ -141,16 +136,6 @@ A documentação completa inclui:
 - Comparativo geográfico
 - Aeroportos mais afetados por cada tipo de atraso
 
-## MIRO - Gestão do Projeto
-
-**Board Colaborativo**: [Acessar MIRO](https://miro.com/app/board/uXjVGSwQ8Ok=/?share_link_id=465202330329)
-
-Utilize o board do MIRO para:
-- Acompanhar o progresso das entregas
-- Visualizar diagramas e modelagens
-- Colaborar em tempo real com a equipe
-- Organizar tarefas e sprints
-
 ---
 
 ## Como Executar
@@ -166,8 +151,8 @@ Utilize o board do MIRO para:
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/FelipeFreire-gf/SBD2-Airline_Delay_Cause.git
-cd SBD2-Airline_Delay_Cause
+git clone https://github.com/MateuSansete/Airbnb_analytics.git
+cd Airbnb_analytics
 ```
 
 ### 2. Instale as dependências
@@ -215,7 +200,7 @@ Acesse: `http://localhost:8000`
 ## Estrutura do Projeto
 
 ```
-SBD2-Airline_Delay_Cause/
+Airbnb_analytics/
 ├── Data Layer/
 │   ├── gold/                       # Camada Gold (agregações e métricas)
 │   │   ├── consultas.sql          # Consultas analíticas
@@ -264,49 +249,6 @@ SBD2-Airline_Delay_Cause/
 
 ---
 
-## Principais Análises
-
-**13 Visualizações Implementadas:**
-
----
-
-## Entregas do Projeto
-
-| Entrega | Título | Status | Descrição |
-|---------|--------|--------|-----------|
-| **0** | Base de Dados | Concluído | Coleta e armazenamento dos dados brutos (Bronze) |
-| **1** | Raw → Silver | Concluído | Pipeline ETL, limpeza e carga no PostgreSQL |
-| **2** | Gold Layer | Em desenvolvimento | Agregações, métricas e visualizações analíticas |
-| **3** | Power BI | Em desenvolvimento | Dashboard interativo e publicação |
-
----
-
-## Equipe
-
-
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center">
-      <br>
-    </td>
-    <td align="center">
-      <a href="https://github.com/MateuSansete">
-        <img style="border-radius: 50%;" src="https://github.com/MateuSansete.png" width="120px;" alt="Mateus Bastos"/>
-        <br>
-        <sub><b>Mateus Bastos</b></sub>
-      </a>
-      <br>
-      <sub>Desenvolvedor</sub>
-    </td>
-  </tr>
-</table>
-
-</div>
-
----
-
 ## Licença
 
 Este projeto é parte de uma atividade acadêmica da disciplina de **Sistemas de Banco de Dados 2** da **Universidade de Brasília (UnB)**.
@@ -315,10 +257,6 @@ Este projeto é parte de uma atividade acadêmica da disciplina de **Sistemas de
 **Curso**: Engenharia de Software  
 **Período**: 2025.4
 
----
 
-<div align="center">
-
-<sub>Desenvolvido pelo Grupo 04 | UnB - 2026</sub>
 
 </div>
