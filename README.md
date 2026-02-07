@@ -157,8 +157,6 @@ cd Airbnb_analytics
 
 ### 2. Instale as dependências
 
-### 2. Instale as dependências
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -186,7 +184,7 @@ jupyter notebook
 Execute os notebooks na seguinte ordem:
 1. `Transformer/etl_raw_to_silver.ipynb` - Processa dados brutos para a camada Silver
 2. `Data Layer/silver/analytics.ipynb` - Gera análises e visualizações
-
+<!---
 ### 5. Visualize a documentação localmente
 
 ```bash
@@ -233,6 +231,7 @@ Airbnb_analytics/
 ├── mkdocs.yml                      # Configuração da documentação
 └── README.md
 ```
+--->
 
 ---
 
