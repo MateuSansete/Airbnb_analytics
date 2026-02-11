@@ -251,11 +251,6 @@ Airbnb_analytics/
 
 ## Licença
 
-Este projeto é parte de uma atividade acadêmica da disciplina de **Sistemas de Banco de Dados 2** da **Universidade de Brasília (UnB)**.
-
-**Instituição**: Faculdade de Ciências e Tecnologias em Engenharia (FCTE)  
-**Curso**: Engenharia de Software  
-**Período**: 2025.4
 
 
 
