@@ -22,7 +22,9 @@
 ## Arquitetura
 
 <div align="center">
-<img src="assets/docs/arquitetura_airbnb.png" alt="Arquitetura" style="max-width: 400px; height: auto; margin: 20px 0;">
+  <img src="assets/docs/arquitetura_airbnb.png" 
+       alt="Arquitetura do Projeto Airbnb Analytics" 
+       width="100%">
 </div>
 
 ### Sobre o projeto
@@ -41,6 +43,38 @@ O projeto implementa um **pipeline ETL** utilizando a **Arquitetura Medallion** 
   - Padrões de sazonalidade
   - Cancelamentos e desvios
   - Tendências temporais
+
+
+##  Entrega de Valor: Dashboard Analítico
+
+O projeto culmina na entrega de um **Dashboard Analítico Interativo**, desenvolvido para apoiar a tomada de decisão baseada em dados.
+
+A solução permite que gestores identifiquem rapidamente a **causa-raiz de atrasos** (condições climáticas, falhas operacionais da companhia aérea ou questões de segurança), reduzindo o tempo de análise e aumentando a eficiência operacional.
+
+---
+
+### 🔗 Acesso ao Dashboard
+
+**[➤ ACESSE O DASHBOARD INTERATIVO](https://app.powerbi.com/view?r=eyJrIjoiYmRjOGFkMTgtMjZjNy00NDYzLWJmMDYtOWQ4OTQzZTJmNmY0IiwidCI6Ijc1MjM5YmIxLTlhZjYtNGYxNy04NzMzLThlODlmNGU5MmMxMSJ9)**
+
+<div align="center">
+  <a href="https://app.powerbi.com/view?r=eyJrIjoiYmRjOGFkMTgtMjZjNy00NDYzLWJmMDYtOWQ4OTQzZTJmNmY0IiwidCI6Ijc1MjM5YmIxLTlhZjYtNGYxNy04NzMzLThlODlmNGU5MmMxMSJ9" target="_blank">
+    <img src="assets/dashboard_preview.png" alt="Preview do Dashboard Interativo" width="100%">
+    <br>
+    <strong> Clique para acessar a versão interativa online</strong>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 ### Fonte de Dados
 
