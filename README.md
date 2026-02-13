@@ -50,13 +50,13 @@ O projeto implementa um **pipeline ETL** utilizando a **Arquitetura Medallion** 
 
 Os dados são provenientes do **Bureau of Transportation Statistics (BTS)** do governo dos Estados Unidos, disponibilizados no Kaggle. O dataset cobre o período de **agosto de 2013 a agosto de 2023** (10 anos de dados históricos) e fornece informações granulares sobre performance operacional de companhias aéreas em aeroportos dos EUA.
 
-## 📂 O Dataset
+##  O Dataset
 Os dados originais compreendem 10 anos de histórico operacional (2013-2023). A modelagem transformou o formato tabular original em um esquema analítico:
 
 * **Dimensões:** Temporal (Ano/Mês), Geográfica (Aeroportos) e Organizacional (Companhias Aéreas).
 * **Métricas (Fatos):** Contagem de voos, cancelamentos, desvios e 5 categorias específicas de causas de atraso (Carrier, Weather, NAS, Security, Late Aircraft).
 
-* Para uma descrição detalhada de cada campo e dicionário de dados, [acesse a documentação completa aqui](https://github.com/MateuSansete/Airbnb_analytics/blob/main/DataLayer/raw/dicionario_de_dados.pdf).
+
 
 
 
@@ -135,33 +135,30 @@ Execute os notebooks na seguinte ordem:
 
 ```
 Airbnb_analytics/
-├── Data Layer/
-│   ├── gold/                       # Camada Gold (agregações e métricas)
-│   │   ├── consultas.sql          # Consultas analíticas
-│   │   ├── ddl.sql                # Definição do schema gold
-│   │   ├── mer_der_dld.pdf        # Modelagem de dados
-│   │   └── mnemonico.pdf          # Dicionário mnemônico
-│   ├── raw/                        # Camada Bronze (dados brutos)
-│   │   ├── analytics.ipynb        # Análise exploratória dos dados brutos
-│   │   ├── dados_brutos.csv       # Dataset original do Kaggle
-│   │   └── dicionario_de_dados.pdf # Documentação do dataset
-│   └── silver/                     # Camada Silver (dados limpos)
-│       ├── analytics.ipynb        # Análises da camada silver
-│       ├── ddl.sql                # Definição do schema silver
-│       └── mer_der_dld.pdf        # Modelagem de dados silver
-├── Transformer/
-│   ├── etl_raw_to_silver.ipynb    # Pipeline ETL Bronze → Silver
-│   └── etl_silver_to_gold.ipynb   # Pipeline ETL Silver → Gold
-│
-├── docker-compose.yml              # Configuração do PostgreSQL
-│
-├── requirements.txt                # Dependências Python
-│
-└── README.md
+├── assets/                 # Recursos visuais e diagramas do projeto
+├── DataLayer/              # Camadas da Arquitetura Medallion
+│   ├── gold/               # Camada Gold: Modelagem dimensional e scripts finais
+│   │   ├── ddl.sql
+│   │   ├── mer_der_dld_gold.pdf
+│   │   ├── mnemonicos.pdf
+│   │   └── starschema.pdf
+│   ├── raw/                # Camada Bronze: Dados brutos e dicionários
+│   │   ├── analytics.ipynb
+│   │   ├── dados_brutos.csv
+│   │   └── dicionario_de_dados.pdf
+│   └── silver/             # Camada Silver: Dados limpos e modelagem intermediária
+│       ├── analytics.ipynb
+│       ├── ddl.sql
+│       └── mer_der_dld.pdf
+├── Transformer/            # Processamento e scripts de ETL
+│   └── etl_raw_to_silver.ipynb
+├── docker-compose.yml      # Infraestrutura PostgreSQL via Docker
+├── LICENSE                 # Licença do projeto
+├── README.md               # Documentação principal
+└── requirements.txt        # Dependências do ambiente Python
 ```
---->
 
----
+
 
 ## Tecnologias Utilizadas
 
