@@ -49,97 +49,29 @@ O projeto implementa um **pipeline ETL** utilizando a **Arquitetura Medallion** 
 **Tamanho**: 28.73 MB | **Atualização**: Anual 
 
 Os dados são provenientes do **Bureau of Transportation Statistics (BTS)** do governo dos Estados Unidos, disponibilizados no Kaggle. O dataset cobre o período de **agosto de 2013 a agosto de 2023** (10 anos de dados históricos) e fornece informações granulares sobre performance operacional de companhias aéreas em aeroportos dos EUA.
-<!--
 
-#### Estrutura do Dataset
+## 📂 O Dataset
+Os dados originais compreendem 10 anos de histórico operacional (2013-2023). A modelagem transformou o formato tabular original em um esquema analítico:
 
-O dataset possui **formato tabular** com **21 colunas** organizadas por combinações únicas de ano, mês, companhia aérea e aeroporto:
+* **Dimensões:** Temporal (Ano/Mês), Geográfica (Aeroportos) e Organizacional (Companhias Aéreas).
+* **Métricas (Fatos):** Contagem de voos, cancelamentos, desvios e 5 categorias específicas de causas de atraso (Carrier, Weather, NAS, Security, Late Aircraft).
 
-**Dimensões Temporais e Identificadores:**
-- `year`, `month` - Dimensões temporais
-- `carrier`, `carrier_name` - Código e nome da companhia aérea
-- `airport`, `airport_name` - Código e nome do aeroporto
+* Para uma descrição detalhada de cada campo e dicionário de dados, [acesse a documentação completa aqui](https://github.com/MateuSansete/Airbnb_analytics/blob/main/DataLayer/raw/dicionario_de_dados.pdf).
 
-**Métricas Operacionais:**
-- `arr_flights` - Total de voos de chegada
-- `arr_del15` - Voos atrasados ≥15 minutos
-- `arr_cancelled` - Voos cancelados
-- `arr_diverted` - Voos desviados
 
-**Contagem de Atrasos por Causa:**
-- `carrier_ct` - Atrasos devido à companhia aérea
-- `weather_ct` - Atrasos devido a condições meteorológicas
-- `nas_ct` - Atrasos devido ao NAS (National Airspace System)
-- `security_ct` - Atrasos devido a segurança
-- `late_aircraft_ct` - Atrasos devido a aeronave atrasada
 
-**Tempo de Atraso por Causa (minutos):**
-- `arr_delay` - Tempo total de atraso de chegada
-- `carrier_delay` - Tempo de atraso atribuído à companhia
-- `weather_delay` - Tempo de atraso atribuído ao clima
-- `nas_delay` - Tempo de atraso atribuído ao NAS
-- `security_delay` - Tempo de atraso atribuído à segurança
-- `late_aircraft_delay` - Tempo de atraso atribuído a aeronave atrasada
+## Inteligência de Dados e Analytics
 
-#### Casos de Uso
+O dashboard final foi estruturado para responder perguntas críticas de negócio, organizadas em 4 pilares principais:
 
-Este dataset permite realizar:
-
-**Análise de Performance**: Avaliar pontualidade de companhias em aeroportos específicos  
-**Identificação de Tendências**: Descobrir padrões sazonais e períodos críticos  
-**Análise de Causa-Raiz**: Investigar os principais fatores de atrasos  
-**Benchmarking**: Comparar performance entre companhias e aeroportos  
-**Modelagem Preditiva**: Desenvolver modelos de previsão de atrasos  
-**Insights Estratégicos**: Informar decisões operacionais e estratégias de mitigação
-<!--
-
-Para mais detalhes veja a documentação:
-
-## Documentação
-
-**Site de Documentação**: [https://mateusansete.github.io/Airbnb_analytics/](https://mateusansete.github.io/Airbnb_analytics/)
-
-A documentação completa inclui:
-- Estrutura das camadas Bronze, Silver e Gold
-- Pipeline ETL detalhado
-- Modelagem de dados e schema do banco
-- Guia de instalação e execução
-- Análises e visualizações implementadas
-
-## Dashboard Power BI
--->
-**Em desenvolvimento** - Dashboard interativo para análise de atrasos de voos
-
-**Páginas e Features Planejadas:**
-
-**Overview (KPIs Principais)**
-- Total de voos, taxa de atrasos ≥15min, cancelamentos e desvios
-- Performance geral do setor aéreo (2013-2023)
-- Principais métricas comparativas
-
-**Análise por Companhia Aérea**
-- Ranking de performance (pontualidade, cancelamentos)
-- Comparativo entre carriers (benchmarking)
-- Volume operacional vs. eficiência
-
-**Análise de Causas de Atrasos**
-- Breakdown das 5 causas (Carrier, Weather, NAS, Security, Late Aircraft)
-- Contribuição relativa e absoluta de cada fator
-- Análise de causa-raiz por companhia e aeroporto
-
-**Análise Temporal e Sazonalidade**
-- Tendências anuais e mensais
-- Padrões sazonais e períodos críticos
-- Evolução histórica da performance
-
-**Análise por Aeroporto**
-- Performance dos principais hubs
-- Comparativo geográfico
-- Aeroportos mais afetados por cada tipo de atraso
+* **Executive Overview:** KPIs globais de volume, taxa de atraso e cancelamentos (2013-2023).
+* **Root Cause Analysis:** Decomposição técnica das causas de atraso (Weather, Carrier, NAS, Security, Late Aircraft).
+* **Benchmarking Operacional:** Ranking de performance por Companhia Aérea e análise de eficiência por Hub (Aeroporto).
+* **Time Series & Sazonalidade:** Identificação de períodos críticos e tendências históricas de performance.
 
 ---
 
-## Como Executar
+## Como Executar o projeto
 
 ### Pré-requisitos
 
@@ -161,6 +93,15 @@ cd Airbnb_analytics
 ```bash
 pip install -r requirements.txt
 ```
+
+Recomenda-se o uso de ambiente virtual:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux / Mac
+```
+# venv\Scripts\activate   # Windows
+
 
 ### 3. Inicie o banco de dados PostgreSQL
 
@@ -185,14 +126,8 @@ jupyter notebook
 Execute os notebooks na seguinte ordem:
 1. `Transformer/etl_raw_to_silver.ipynb` - Processa dados brutos para a camada Silver
 2. `Data Layer/silver/analytics.ipynb` - Gera análises e visualizações
-<!---
-### 5. Visualize a documentação localmente
 
-```bash
-mkdocs serve
-```
 
-Acesse: `http://localhost:8000`
 
 ---
 
@@ -217,19 +152,11 @@ Airbnb_analytics/
 ├── Transformer/
 │   ├── etl_raw_to_silver.ipynb    # Pipeline ETL Bronze → Silver
 │   └── etl_silver_to_gold.ipynb   # Pipeline ETL Silver → Gold
-├── docs/                           # Documentação MkDocs
-│   ├── index.md
-│   ├── assets/
-│   └── pages/
-│       ├── entrega0/              # Base de Dados
-│       ├── entrega1/              # Raw → Silver
-│       ├── entrega2/              # Gold Layer
-│       └── entrega3/              # Power BI
-├── site/                           # Site estático gerado pelo MkDocs
+│
 ├── docker-compose.yml              # Configuração do PostgreSQL
-├── Dockerfile                      # Imagem Docker do projeto
+│
 ├── requirements.txt                # Dependências Python
-├── mkdocs.yml                      # Configuração da documentação
+│
 └── README.md
 ```
 --->
