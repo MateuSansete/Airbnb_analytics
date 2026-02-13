@@ -251,7 +251,7 @@ Airbnb_analytics/
 
 ## Licença
 
-
+GPL 3.0
 
 
 </div>
