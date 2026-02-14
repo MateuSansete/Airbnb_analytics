@@ -53,9 +53,8 @@ A solução permite que gestores identifiquem rapidamente a **causa-raiz de atra
 
 ---
 
-### 🔗 Acesso ao Dashboard
 
-**[➤ ACESSE O DASHBOARD INTERATIVO](https://app.powerbi.com/view?r=eyJrIjoiYmRjOGFkMTgtMjZjNy00NDYzLWJmMDYtOWQ4OTQzZTJmNmY0IiwidCI6Ijc1MjM5YmIxLTlhZjYtNGYxNy04NzMzLThlODlmNGU5MmMxMSJ9)**
+**[➤ ACESSE O DASHBOARD ](https://app.powerbi.com/view?r=eyJrIjoiYmRjOGFkMTgtMjZjNy00NDYzLWJmMDYtOWQ4OTQzZTJmNmY0IiwidCI6Ijc1MjM5YmIxLTlhZjYtNGYxNy04NzMzLThlODlmNGU5MmMxMSJ9)**
 
 <div align="center">
   <a href="https://app.powerbi.com/view?r=eyJrIjoiYmRjOGFkMTgtMjZjNy00NDYzLWJmMDYtOWQ4OTQzZTJmNmY0IiwidCI6Ijc1MjM5YmIxLTlhZjYtNGYxNy04NzMzLThlODlmNGU5MmMxMSJ9" target="_blank">
