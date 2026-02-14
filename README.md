@@ -60,7 +60,6 @@ A solução permite que gestores identifiquem rapidamente a **causa-raiz de atra
   <a href="https://app.powerbi.com/view?r=eyJrIjoiYmRjOGFkMTgtMjZjNy00NDYzLWJmMDYtOWQ4OTQzZTJmNmY0IiwidCI6Ijc1MjM5YmIxLTlhZjYtNGYxNy04NzMzLThlODlmNGU5MmMxMSJ9" target="_blank">
     <img src="assets/dashboard_preview.png" alt="Preview do Dashboard Interativo" width="100%">
     <br>
-    <strong> Clique para acessar a versão interativa online</strong>
   </a>
 </div>
 
@@ -70,10 +69,14 @@ A solução permite que gestores identifiquem rapidamente a **causa-raiz de atra
 
 
 
+---
+##  O Dataset
+Os dados originais compreendem 10 anos de histórico operacional (2013-2023). A modelagem transformou o formato tabular original em um esquema analítico:
 
+* **Dimensões:** Temporal (Ano/Mês), Geográfica (Aeroportos) e Organizacional (Companhias Aéreas).
+* **Métricas (Fatos):** Contagem de voos, cancelamentos, desvios e 5 categorias específicas de causas de atraso (Carrier, Weather, NAS, Security, Late Aircraft).
 
-
-
+---
 
 ### Fonte de Dados
 
@@ -82,14 +85,6 @@ A solução permite que gestores identifiquem rapidamente a **causa-raiz de atra
 **Tamanho**: 28.73 MB | **Atualização**: Anual 
 
 Os dados são provenientes do **Bureau of Transportation Statistics (BTS)** do governo dos Estados Unidos, disponibilizados no Kaggle. O dataset cobre o período de **agosto de 2013 a agosto de 2023** (10 anos de dados históricos) e fornece informações granulares sobre performance operacional de companhias aéreas em aeroportos dos EUA.
-
-##  O Dataset
-Os dados originais compreendem 10 anos de histórico operacional (2013-2023). A modelagem transformou o formato tabular original em um esquema analítico:
-
-* **Dimensões:** Temporal (Ano/Mês), Geográfica (Aeroportos) e Organizacional (Companhias Aéreas).
-* **Métricas (Fatos):** Contagem de voos, cancelamentos, desvios e 5 categorias específicas de causas de atraso (Carrier, Weather, NAS, Security, Late Aircraft).
-
-
 
 
 
